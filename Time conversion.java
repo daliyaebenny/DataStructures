@@ -21,13 +21,19 @@ class Result {
     
     String s1[]=s.split(":");
     if(s1[2].matches("[0-9]*[pP][Mm]")){
+      if(!s1[0].contains("12")){
       int n = Integer.parseInt(s1[0])+ 12;
-      s1[0]=Integer.toString(n);   
+      s1[0]=Integer.toString(n);
+      }   
+    }else{
+        if(s1[0].contains("12")){
+         s1[0]="00";    
+        }
     }
     String x = s1[2].replaceAll("[aApP][mM]","");
     return s1[0]+":"+s1[1]+":"+x;
     
-    }    
+    } 
 
 }
 
