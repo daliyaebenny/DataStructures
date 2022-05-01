@@ -1,0 +1,47 @@
+package com.daliya;
+
+import java.util.HashMap;
+
+public class StringUniqueChar {
+	)
+	boolean checkUniqueChar(String input) {
+//		char[] str = input.toLowerCase().toCharArray();
+//		HashMap<String,Integer> strMap = new HashMap<>();
+//		for(char trial:str) {
+//		if(strMap.get(trial)!=null) {
+//			System.out.println(trial +"present");
+//			strMap.replace(Character.toString(trial),strMap.get(trial)+1);
+//		}
+//		else {
+//			strMap.put(Character.toString(trial), 1);
+//		}
+//		
+//		}
+//		for(int values:strMap.values()) {
+//			if(values>1) {
+//				return false;
+//			}
+//		}
+//		return true;
+		for(int i =0;i<input.length();i++) {
+			for(int j=i+1;i<input.length();i++) {
+				if(input.charAt(i)==input.charAt(j)) {
+					return false;
+				}
+			}
+		}
+		
+		
+		return true;
+		
+	}
+	
+	
+	
+	
+	public static void main(String args[]) {
+		StringUniqueChar str = new StringUniqueChar();
+		System.out.println(str.checkUniqueChar("Abacas"));
+	}
+
+}

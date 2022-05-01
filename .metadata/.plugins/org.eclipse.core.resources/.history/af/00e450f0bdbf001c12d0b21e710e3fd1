@@ -1,0 +1,18 @@
+package com.daliya;
+
+public class Test {
+
+	public static void main(String[] args) {
+	 Node root = new Node(10);
+	 root.left = new Node(20);
+	 root.right = new Node(30);
+	 root.left.left = new Node(40);
+	 System.out.print("INORDER ");
+	 root.inorder(root);
+	 System.out.print("\n PREORDER \n");
+	 root.preorder(root);
+	 System.out.print("POSTORDER \n");
+	 root.postorder(root);
+	}
+
+}

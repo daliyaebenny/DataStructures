@@ -1,0 +1,31 @@
+package com.daliya;
+
+//Tree applications 
+//Hierarchical data repn in memory
+// binary tree every node has atmost 2 children ie., 0,1,2 
+
+public class Node {
+	int key;
+	Node left;
+	Node right;
+
+	Node(int k) {
+		key = k;
+	}
+
+	public void inorder(Node root) {
+		if (root != null) {
+			inorder(root.left);
+			System.out.print(root.key+",");
+			inorder(root.right);
+		}
+	}
+
+	public void preorder(Node root) {
+		if (root != null) {
+			System.out.print(root.key+",");
+			preorder(root.left);
+			preorder(root.right);
+		}
+	}
+}

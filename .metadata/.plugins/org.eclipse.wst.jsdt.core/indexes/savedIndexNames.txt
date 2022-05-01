@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+C:\Training\Preparations\DataStructures\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

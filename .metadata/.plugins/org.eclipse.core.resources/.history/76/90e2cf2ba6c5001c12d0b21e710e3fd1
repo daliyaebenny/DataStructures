@@ -1,0 +1,38 @@
+package com.daliya;
+
+import java.util.HashMap;
+
+public class StringUniqueChar {
+	
+	@SuppressWarnings("unlikely-arg-type")
+	boolean checkUniqueChar(String input) {
+		char[] str = input.toLowerCase().toCharArray();
+		HashMap<String,Integer> strMap = new HashMap<>();
+		for(char trial:str) {
+		if(strMap.containsKey(trial)) {
+			
+			strMap.put(trial,strMap.get(trial)+1);
+		}
+		else {
+			strMap.put(Character.toString(trial), 1);
+		}
+		
+		}
+		for(int values:strMap.values()) {
+			if(values>1) {
+				return false;
+			}
+		}
+		return true;
+		
+	}
+	
+	
+	
+	
+	public static void main(String args[]) {
+		StringUniqueChar str = new StringUniqueChar();
+		System.out.println(str.checkUniqueChar("Abacas"));
+	}
+
+}
